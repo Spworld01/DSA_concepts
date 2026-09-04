@@ -9,4 +9,5 @@ def palindrome(num):
 
     return n==result
 
-print(palindrome(121))
+print(palindrome(-121))
+
