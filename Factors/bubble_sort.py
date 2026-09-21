@@ -11,8 +11,3 @@ def Bubble_sort(nums):
 
 
 print(Bubble_sort(nums))
-
-
-
-
-        
