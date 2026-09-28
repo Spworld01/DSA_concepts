@@ -25,4 +25,5 @@ def remove_zero(nums):
 
     return nums
 
-print(remove_zero(nums))
+print(remove_zero(nums))  
+

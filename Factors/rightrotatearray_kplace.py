@@ -1,4 +1,4 @@
-nums = [3,9,5,6,7,2,10,9]
+nums = [7, 3, 9, 1]
 
 def rightrotate_(nums,left,right):
     while left<right:
@@ -7,12 +7,13 @@ def rightrotate_(nums,left,right):
         right-=1
 
 n=len(nums)
-k=3
+k=9
 k=k%n
 
-rightrotate_(nums,0,n-1)
+# rightrotate_(nums,0,n-1)
 rightrotate_(nums,0,k-1)
 rightrotate_(nums,k,n-1)
+rightrotate_(nums,0,n-1)
 
 
 print(nums)
