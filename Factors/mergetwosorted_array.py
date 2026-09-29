@@ -34,3 +34,4 @@ def mergetwosort_array(nums1,nums2):
     return result
 
 print(mergetwosort_array(nums1,nums2))
+
