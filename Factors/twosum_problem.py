@@ -11,3 +11,5 @@ def two_sumpointer(nums,target):
         hash_map[nums[i]]=i
 
 print(two_sumpointer(nums,11))
+
+
