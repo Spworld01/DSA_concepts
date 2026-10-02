@@ -1,37 +1,37 @@
-# nums=[-2,1,-3,4,-1,2,1,-5,4]
+nums=[-2,1,-3,4,-1,2,1,-5,4]
 
-# def subarray_(nums):
-#     n=len(nums)
+def subarray_(nums):
+    n=len(nums)
 
-#     maxi=float("-inf")
-#     for i in range(0,n):
-#         total=0
-#         for j in range(i,n):
-#             total=total+nums[j]
-#             maxi=max(maxi,total)
+    maxi=float("-inf")
+    for i in range(0,n):
+        total=0
+        for j in range(i,n):
+            total=total+nums[j]
+            maxi=max(maxi,total)
 
-#     return maxi
+    return maxi
 
-# print(subarray_(nums))
-
-
+print(subarray_(nums))
 
 
-# def Subarray_2(nums):
-#     n=len(nums)
 
-#     maxi=float("-inf")
-#     total=0
-#     for i in range(0,n):
-#         total=total+nums[i]
-#         maxi=max(maxi,total)
 
-#         if total<0:
-#             total=0
+def Subarray_2(nums):
+    n=len(nums)
 
-#     return maxi
+    maxi=float("-inf")
+    total=0
+    for i in range(0,n):
+        total=total+nums[i]
+        maxi=max(maxi,total)
 
-# print(Subarray_2(nums))
+        if total<0:
+            total=0
+
+    return maxi
+
+print(Subarray_2(nums))
 
 # 1. Maximum Subarray Sum
 nums1= [-2, 1, -3, 4, -1, 2, 1, -5, 4]
