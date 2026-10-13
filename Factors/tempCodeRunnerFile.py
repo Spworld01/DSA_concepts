@@ -1,2 +1,2 @@
-)
-# rightrotate_(nums,k,n-1)
+for i in range(len(matrix)):
+#     for j in range(len(matrix[0]))
