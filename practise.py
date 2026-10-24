@@ -43,4 +43,44 @@ for i in range(1,int(sqrt(num))+1):
         result.append(num//i)
 
     result.sort()
-print(result)
+# print(result)
+
+
+nums=[5,6,7,8,1,9,111,1,1,5,1,1]
+freq_map=dict()
+for i in range(0,len(nums)):
+    if nums[i] in freq_map:
+        freq_map[nums[i]]+=1
+    else:
+        freq_map[nums[i]]=1
+# print(freq_map)
+
+
+hash_map=dict()
+n=len(nums)
+for i in range(0,n):
+    hash_map[nums[i]]=hash_map.get(nums[i],0)+1
+# print(hash_map)
+
+
+count=0
+def func():
+    global count
+
+    if count==4:
+        return 
+    # print("Anirudh")
+    count+=1
+    func()
+func()
+
+
+count=0
+def func():
+    global count
+    if count==4:
+        return 
+    count+=1
+    func()
+    print("Anirudh")
+func()
