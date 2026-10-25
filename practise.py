@@ -82,5 +82,83 @@ def func():
         return 
     count+=1
     func()
-    print("Anirudh")
+    # print("Anirudh")
 func()
+
+
+nums = [1, 7, 8, 4, 5, 6, 9, 2]
+
+def selection_sort1(nums):
+    n=len(nums)
+
+    for i in range(0,n):
+        mini_index=i
+
+        for j in range(i+1,n):
+            if nums[j]<nums[mini_index]:
+                mini_index=j
+
+
+        nums[i],nums[mini_index]=nums[mini_index],nums[i]
+
+    return nums
+
+
+
+
+def selection_sort2(nums):
+    n=len(nums)
+
+    for i in range(0,n):
+        mini_index=i
+
+        for j in range(i+1,n):
+            if nums[j]>nums[mini_index]:
+                mini_index=j
+        nums[i],nums[mini_index]=nums[mini_index],nums[i]
+    return nums
+
+nums=[5,8,1,6,9,2,4]
+def bubble_sort(nums):
+    n=len(nums)
+
+    for i in range(n-2,-1,-1):
+        for j in range(0,i+1):
+            if nums[j]>nums[j+1]:
+                nums[j],nums[j+1]=nums[j+1],nums[j]
+        
+
+    return nums
+
+
+def bubble_sort2(nums):
+    n=len(nums)
+
+    for i in range(n-2,-1,-1):
+        for j in range(0,i+1):
+            if nums[j]<nums[j+1]:
+                nums[j],nums[j+1]=nums[j+1],nums[j]
+
+    return nums
+
+
+nums1=[1,2,3,4,5,7,6,8,9,10]
+def bubble_sort3(nums):
+    n=len(nums)
+
+    for i in range(n-2,-1,-1):
+        is_swap=False
+        for j in range(0,i+1):
+            if nums[j]>nums[j+1]:
+                nums[j],nums[j+1]=nums[j+1],nums[j]
+                is_swap=True
+
+        if is_swap==False:
+            print("True")
+        else:
+            print("False")
+
+print(bubble_sort3(nums1))
+
+    
+        
