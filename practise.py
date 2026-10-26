@@ -158,7 +158,115 @@ def bubble_sort3(nums):
         else:
             print("False")
 
-print(bubble_sort3(nums1))
+nums=[3,4,5,6,7,8,9,10,1]
 
+def insertion_sort(nums):
+    n=len(nums)
+
+    for i in range(n):
+        key=nums[i]
+        j=i-1
+
+        while j>=0 and nums[j]<key:
+            nums[j+1]=nums[j]
+            j-=1
+
+        nums[j+1]=key
+    return nums
+nums=[1,3,6,7,3,5,9,10,2]
+
+nums = [1, 3, 6, 7, 5, 9, 10, 2]
+
+def merge_sort(nums):
+
+    if len(nums)<=1:
+        return nums
+
+    mid=len(nums)//2
+
+    left_array=nums[:mid]
+    right_array=nums[mid:]
+
+    left=merge_sort(left_array)
+    right=merge_sort(right_array)
+
+    return merge_arrray(left,right)
+
+def merge_arrray(left,right):
+    result=[]
+    i,j=0,0
+    n,m=len(left),len(right)
     
-        
+    while i<n and j<m:
+        if left[i]<=right[j]:
+            result.append(left[i])
+            i+=1
+        else:
+            result.append(right[j])
+            j+=1
+
+    while i<n:
+        result.append(left[i])
+        i+=1
+    while j<m:
+        result.append(right[j])
+        j+=1
+
+    return result
+
+arr=[10,7,8,9,1,5]
+
+def quicksort(arr,low,high):
+    if low<high:
+        p_ind=partition(arr,low,high)
+
+        quicksort(arr,low,p_ind-1)
+        quicksort(arr,p_ind+1,high)
+
+    return arr
+
+def partition(arr,low,high):
+    pivot=arr[low]
+
+    i=low
+    j=high
+
+    while i<j:
+        while arr[i]>=pivot and i<high:
+            i+=1
+        while arr[j]<pivot and j>low:
+            j-=1
+
+        if i<j:
+            arr[i],arr[j]=arr[j],arr[i]
+
+    arr[low],arr[j]=arr[j],arr[low]
+
+    return j
+
+
+
+
+nums=[0,0,1,1,1,2,2,3,3,4]
+
+def removeduplicaate_(nums):
+    n=len(nums)
+
+    if len(nums)<1:
+        return 1
+
+    i=0
+    j=i+1
+
+    while j<n:
+        if nums[i]!=nums[j]:
+            i+=1
+            nums[i],nums[j]=nums[j],nums[i]
+            
+        j+=1
+
+    return i+1
+
+print(removeduplicaate_(nums))
+
+
