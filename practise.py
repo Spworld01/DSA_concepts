@@ -267,6 +267,44 @@ def removeduplicaate_(nums):
 
     return i+1
 
-print(removeduplicaate_(nums))
 
 
+
+nums1=[1,2,4,0,3,0,0,3,5,1]
+
+def movezero__(nums):
+    n=len(nums)
+
+    i=0
+    
+
+    while i<n:
+        if nums[i]==0:
+            break
+        i+=1
+    
+    if i==n:
+        return nums 
+    
+
+    j=i+1
+
+    while j<n:
+        if nums[j]!=0:
+            nums[i],nums[j]=nums[j],nums[i]
+            i+=1
+
+        j+=1
+    
+    return nums
+
+
+def linearsearch__(nums,target):
+    n=len(nums)
+
+    for i in range(n):
+        if nums[i]==target:
+            return i
+        return -1
+
+    
