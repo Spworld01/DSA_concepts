@@ -323,6 +323,91 @@ def twosum__(nums, target):
         hash_map[nums[i]] = i
 
     
+nums=[-2,+1,-3,4,-1,2,1,-5,4]
 
-print(twosum__(nums3, 13))
+def maximunsub(nums):
+    n=len(nums)
+    maxi=float("-inf")
+    for i in range(0,n):
+        total=0
+        for j in range(i,n):
+            total=total+nums[j]
+            maxi=max(maxi,total)
+        return maxi
+ 
+
+def maximumsubarray2(nums):
+    n=len(nums)
+
+    maxi=float("-inf")
+    total=0
+    for i in range(0,n):
+        total=total+nums[i]
+        maxi=max(maxi,total)
+        if total<0:
+            total=0
+
+    return maxi
+
+
+nums5=[7,1,5,3,6,4]
+
+def stockbuysell_(nums):
+    n=len(nums)
+
+    lowest=0
+    Low=float("+inf")
+    profit=float("-inf")
+
+    for i in range(0,n):
+
+        lowest=nums[i]
+        Low=min(lowest,Low)
+
+        profit=max(profit,nums[i]-Low)
+
+    return profit
+
+
+num4=[5,10,-3,-1,10,6]
+
+def Rearrange(nums):
+    n=len(nums)
+
+    pos=[]
+    neg=[]
+
+    for i in range(0,n):
+        if nums[i]>=0:
+            pos.append(nums[i])
+        else:
+            neg.append(nums[i])
     
+    for i in range(0,len(pos)):
+        nums[2*i]=pos[i]
+        nums[(2*i)+1]=neg[i]
+    return nums
+
+
+
+# matrix=[]
+# for i in range(rows):
+#     row=[]
+#     for j in range(cols):
+#         value=int(input())
+#         row.append(value)
+
+#     matrix.append(row)
+
+
+rows=int(input())
+cols=int(input())
+matrix=[]
+for i in range(rows):
+    row=list(map(int,input().split()))
+    matrix.append(row)
+
+print(matrix)
+
+
+
