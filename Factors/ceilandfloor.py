@@ -18,4 +18,5 @@ def ceilandfloor(nums,target):
             floor=nums[mid]
             low=mid+1
     return [floor,ceil]
-print(ceilandfloor(nums,20))
+print(ceilandfloor(nums,2))
+
